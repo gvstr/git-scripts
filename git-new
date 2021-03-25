@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#Input to this script have to be the repo name: github.com/[your-username]/[REPONAME].git
+
+#Github user account basepath and suffix
+GIT_BASE="https://github.com/gvstr/"
+GIT_SUFFIX=".git"
+# Get current system path
+CURRENT_PATH="`dirname \"$0\"`"
+# Get name of new project, this will be the new folder name and the clone parameter
+REPOSITORY=$1
+# Clone the repo, change directory into new folder and open folder in vs code
+git clone "$GIT_BASE""$REPOSITORY""$GIT_SUFFIX" && cd "$REPOSITORY" && code .

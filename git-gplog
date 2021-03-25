@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git log --pretty=format:'%C(magenta)%h %<(24)%C(cyan)%ad %<(18)%C(green)%an %C(reset)%s' --date=local --graph --all
